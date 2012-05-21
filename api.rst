@@ -29,7 +29,7 @@ JSON Request body::
 Sample XML request::
 
     $ curl -X POST http://url/users/login \
-        -H "Content-Type: application/json" \
+        -H "Content-Type: application/xml" \
         -d "<User><username>foo</username><password>bar</password></User>" \
         -c /tmp/cookie
 
