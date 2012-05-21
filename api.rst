@@ -31,14 +31,14 @@ Sample XML request::
     $ curl -X POST http://url/users/login \
         -H "Content-Type: application/json" \
         -d "<User><username>foo</username><password>bar</password></User>" \
-        -b /tmp/cookie
+        -c /tmp/cookie
 
 Sample JSON request::
 
     $ curl -X POST http://url/users/login \
         -H "Content-Type: application/json" \
         -d "{'User': {'username': 'foo', 'password': 'bar'}}" \
-        -b /tmp/cookie
+        -c /tmp/cookie
 
 .. note::
 
