@@ -122,6 +122,21 @@ Sample JSON response::
     Τα στοιχεία αυτά επιστρέφονται σε μια δεύτερη λίστα με το όνομα ``companies``.
 
 
+Offer Types
+-----------
+
+====== ======================== ===========
+Method Rest URI                 Description
+====== ======================== ===========
+GET    url/**offers/happyhour** Retrieve list of publicly available **Happy Hour** offers.
+------ ------------------------ -----------
+GET    url/**offers/coupons**   Retrieve list of publicly available **Coupons** offers.
+------ ------------------------ -----------
+GET    url/**offers/limited**   Retrieve list of publicly available **Limited** offers.
+====== ======================== ===========
+
+Η απάντηση που επιστρέφουν τα παραπάνω URIs είναι αντίστοιχη με της ενότητας `Offer Index`_ .
+
 Offer View
 ----------
 
