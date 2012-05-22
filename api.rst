@@ -140,6 +140,212 @@ GET    url/**offers/limited**   Retrieve list of publicly available **Limited** 
 Offer View
 ----------
 
+====== ========================== ===========
+Method Rest URI                   Description
+====== ========================== ===========
+GET    url/**offers**/*{offerId}* Retrieve info of offer with id *offerId*
+====== ========================== ===========
+
+The following table describes the URI parameters.
+
+============== ========================== ===========
+required parameters
+-----------------------------------------------------
+Parameter Name Data type                  Description
+============== ========================== ===========
+offerId        string                     ID of offer
+============== ========================== ===========
+
+Sample JSON request::
+
+    $ curl -X GET http://url/offers/17 -H "Accept: application/json"
+
+
+Sample JSON response (offer type **HappyHour**)::
+
+    {
+        "company": {
+            "address": null, 
+            "afm": "011111111", 
+            "created": "2012-04-17 12:29:45", 
+            "fax": null, 
+            "id": "8", 
+            "image_count": "0", 
+            "is_enabled": true, 
+            "latitude": null, 
+            "longitude": null, 
+            "modified": "2012-04-17 12:29:45", 
+            "municipality_id": null, 
+            "name": "\u0386\u03c1\u03c9\u03bc\u03b1 \u0392\u03cd\u03bd\u03b7\u03c2", 
+            "phone": "2100000000", 
+            "postalcode": null, 
+            "service_type": null, 
+            "user_id": "13"
+        }, 
+        "offer": {
+            "autoend": null, 
+            "autostart": null, 
+            "company_id": "8", 
+            "coupon_count": "0", 
+            "coupon_terms": null, 
+            "created": "2012-04-17 12:35:51", 
+            "description": "\u03a4\u03b9\u03bc\u03ad\u03c2 \u03c3\u03b5 Happy Hours\r\n\r\n\u039f\u03b9 \u00ab\u03c7\u03b1\u03c1\u03bf\u03cd\u03bc\u03b5\u03bd\u03b5\u03c2 \u03ce\u03c1\u03b5\u03c2\u00bb \u03ad\u03c7\u03bf\u03c5\u03bd \u03ba\u03b1\u03b8\u03b9\u03b5\u03c1\u03c9\u03b8\u03b5\u03af \u03c0\u03bb\u03ad\u03bf\u03bd \u03c3\u03c4\u03b1 \u03c0\u03b5\u03c1\u03b9\u03c3\u03c3\u03cc\u03c4\u03b5\u03c1\u03b1 \u03bc\u03b1\u03b3\u03b1\u03b6\u03b9\u03ac \u03c4\u03b7\u03c2 \u03c0\u03cc\u03bb\u03b7\u03c2. \u03a3\u03c4\u03bf \u0386\u03c1\u03c9\u03bc\u03b1 \u0392\u03cd\u03bd\u03b7\u03c2, \u03bf\u03b9 Happy Hours \u03be\u03b5\u03ba\u03b9\u03bd\u03bf\u03cd\u03bd \u03c3\u03c4\u03b9\u03c2 11 \u03c4\u03bf \u03b2\u03c1\u03ac\u03b4\u03c5 \u03ba\u03b1\u03b9 \u03b4\u03b9\u03b1\u03c1\u03ba\u03bf\u03cd\u03bd \u03bc\u03ad\u03c7\u03c1\u03b9 \u03ba\u03b1\u03b9 \u03c4\u03bf \u03ba\u03bb\u03b5\u03af\u03c3\u03b9\u03bc\u03bf. \u0395\u03bd\u03c4\u03cc\u03c2 \u03c4\u03c9\u03bd Happy Hours \u03bf\u03b9 \u03c4\u03b9\u03bc\u03ad\u03c2 \u03c0\u03ad\u03c6\u03c4\u03bf\u03c5\u03bd \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c0\u03b5\u03c1\u03b9\u03c3\u03c3\u03cc\u03c4\u03b5\u03c1\u03bf:\r\n\r\n    \u0392\u03b1\u03c1\u03b5\u03bb\u03af\u03c3\u03b9\u03b1 \u03bc\u03c0\u03cd\u03c1\u03b1 330ml \u039c\u039f\u039d\u039f 2,5\u20ac\r\n    \u0392\u03b1\u03c1\u03b5\u03bb\u03af\u03c3\u03b9\u03b1 \u03bc\u03c0\u03cd\u03c1\u03b1 500ml MONO 4,5\u20ac\r\n    \u039c\u03c0\u03cd\u03c1\u03b1 \u03bc\u03b5 \u03c4\u03bf \u03bc\u03ad\u03c4\u03c1\u03bf, \u03c3\u03c4\u03b1 3 \u03bb\u03af\u03c4\u03c1\u03b1 \u03c4\u03bf \u03ad\u03bd\u03b1 \u03bb\u03af\u03c4\u03c1\u03bf \u0394\u03a9\u03a1\u039f!", 
+            "ended": null, 
+            "id": "14", 
+            "image_count": "0", 
+            "is_spam": false, 
+            "max_per_student": null, 
+            "modified": "2012-04-17 12:35:51", 
+            "offer_category": "\u03a6\u03b1\u03b3\u03b7\u03c4\u03cc", 
+            "offer_hours": [
+                {
+                    "day_id": "1", 
+                    "ending": "04:00:00", 
+                    "starting": "23:00:00"
+                }, 
+                {
+                    "day_id": "2", 
+                    "ending": "04:00:00", 
+                    "starting": "23:00:00"
+                }, 
+                {
+                    "day_id": "3", 
+                    "ending": "04:00:00", 
+                    "starting": "23:00:00"
+                }, 
+                {
+                    "day_id": "4", 
+                    "ending": "04:00:00", 
+                    "starting": "23:00:00"
+                }, 
+                {
+                    "day_id": "5", 
+                    "ending": "04:00:00", 
+                    "starting": "23:00:00"
+                }, 
+                {
+                    "day_id": "6", 
+                    "ending": "04:00:00", 
+                    "starting": "23:00:00"
+                }, 
+                {
+                    "day_id": "7", 
+                    "ending": "04:00:00", 
+                    "starting": "23:00:00"
+                }
+            ], 
+            "offer_state": "active", 
+            "offer_type": "happy hour", 
+            "started": "0000-00-00 00:00:00", 
+            "tags": "\u03ac\u03c1\u03c9\u03bc\u03b1 \u03b2\u03cd\u03bd\u03b7\u03c2", 
+            "title": "\u0386\u03c1\u03c9\u03bc\u03b1 \u0392\u03cd\u03bd\u03b7\u03c2 Happy Hours", 
+            "total_quantity": null, 
+            "vote_count": "0", 
+            "vote_sum": "0"
+        }, 
+        "status_code": 200
+    }
+
+Sample JSON response (offer type **Coupons**)::
+
+    {
+        "company": {
+            "address": "test address 28", 
+            "afm": "011111111", 
+            "created": null, 
+            "fax": "0987654321", 
+            "id": "1", 
+            "image_count": "1", 
+            "is_enabled": true, 
+            "latitude": null, 
+            "longitude": null, 
+            "modified": null, 
+            "municipality_id": "13", 
+            "name": "company_test_1", 
+            "phone": "1234567890", 
+            "postalcode": "12345", 
+            "service_type": "estiatorio", 
+            "user_id": "5"
+        }, 
+        "offer": {
+            "autoend": null, 
+            "autostart": null, 
+            "company_id": "1", 
+            "coupon_count": "0", 
+            "coupon_terms": "", 
+            "created": "2012-05-22 12:15:25", 
+            "description": "100 \u03ba\u03bf\u03c5\u03c0\u03cc\u03bd\u03b9\u03b1 \u03b3\u03b9\u03b1 \u03ad\u03ba\u03c0\u03c4\u03c9\u03c3\u03b7 \u03c3\u03b5 \u03b5\u03af\u03b4\u03b7 \u03b3\u03c1\u03b1\u03c6\u03b5\u03af\u03bf\u03c5.", 
+            "ended": null, 
+            "id": "18", 
+            "image_count": "0", 
+            "is_spam": false, 
+            "max_per_student": "0", 
+            "modified": "2012-05-22 12:15:25", 
+            "offer_category": "\u03a0\u03c1\u03bf\u03ca\u03cc\u03bd\u03c4\u03b1", 
+            "offer_hours": [], 
+            "offer_state": "active", 
+            "offer_type": "coupons", 
+            "started": "2012-05-20 14:00:00", 
+            "tags": "\u03b3\u03c1\u03b1\u03c6\u03b5\u03af\u03bf", 
+            "title": "test", 
+            "total_quantity": "100", 
+            "vote_count": "0", 
+            "vote_sum": "0"
+        }, 
+        "status_code": 200
+    }
+
+Sample JSON response (offer type **Limited**)::
+
+    {
+        "company": {
+            "address": null, 
+            "afm": "011111111", 
+            "created": "2012-04-17 09:24:38", 
+            "fax": null, 
+            "id": "4", 
+            "image_count": "0", 
+            "is_enabled": true, 
+            "latitude": null, 
+            "longitude": null, 
+            "modified": "2012-04-17 09:24:38", 
+            "municipality_id": null, 
+            "name": "Pizza Fan", 
+            "phone": "2108112000", 
+            "postalcode": null, 
+            "service_type": null, 
+            "user_id": "9"
+        }, 
+        "offer": {
+            "autoend": null, 
+            "autostart": null, 
+            "company_id": "4", 
+            "coupon_count": "0", 
+            "coupon_terms": null, 
+            "created": "2012-04-17 12:49:56", 
+            "description": "40% \u03b3\u03b9\u03b1 \u03c4\u03bf\u03c5\u03c2 \u03c6\u03bf\u03b9\u03c4\u03b7\u03c4\u03ad\u03c2.", 
+            "ended": null, 
+            "id": "17", 
+            "image_count": "0", 
+            "is_spam": false, 
+            "max_per_student": null, 
+            "modified": "2012-04-17 12:49:56", 
+            "offer_category": "\u03a6\u03b1\u03b3\u03b7\u03c4\u03cc", 
+            "offer_hours": [], 
+            "offer_state": "active", 
+            "offer_type": "limited", 
+            "started": "2012-01-01 00:00:00", 
+            "tags": "pizza fan \u03c0\u03af\u03c4\u03c3\u03b1", 
+            "title": "Pizza Fan 40 \u03c4\u03bf\u03b9\u03c2 \u03b5\u03ba\u03b1\u03c4\u03cc", 
+            "total_quantity": null, 
+            "vote_count": "0", 
+            "vote_sum": "0"
+        }, 
+        "status_code": 200
+    }
+
+
+
 Offer Create
 ------------
 
