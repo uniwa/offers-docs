@@ -37,7 +37,7 @@ Sample JSON request::
 
     $ curl -X POST http://url/users/login \
         -H "Content-Type: application/json" \
-        -d "{"User": {"username": "foo", "password": "bar"}}" \
+        -d '{"User": {"username": "foo", "password": "bar"}}' \
         -c /tmp/cookie
 
 .. note::
@@ -47,7 +47,7 @@ Sample JSON request::
 
 .. note::
 
-    Χρησιμοποιήστε μόνο διπλά quotes ``"`` στο JSON.
+    Χρησιμοποιήστε μόνο διπλά quotes ``"`` στο JSON. Εξωτερικά απαιτούνται μονά quotes ``'`` για αποφυγή expansion από το shell.
 
 
 Offer Index
