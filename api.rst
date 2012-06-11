@@ -72,7 +72,7 @@ Offer Index
 ====== ========================= ===========
 Method Rest URI                  Description
 ====== ========================= ===========
-GET    url/**offers**            Retrieve list of publicly available offers. By default returns 1st page of results only.
+GET    url/**offers**            Retrieve list of publicly available offers. By default returns 1st page of results only. Also see `Request options`_.
 ------ ------------------------- -----------
 GET    url/**index**/**offers**  Same as above, alternative URI.
 ====== ========================= ===========
@@ -141,6 +141,9 @@ Sample JSON response::
 
 
 Request options
+---------------
+
+Παράμετροι που χρησιμοποιούνται στα web requests.
 
 ============== =============== ===========
 Sort keyword   Sort value      Description
@@ -160,14 +163,14 @@ page           *<num>*         Show only results page number = *<num>*
 
     Από προεπιλογή επιστρέφεται μόνο η πρώτη σελίδα αποτελεσμάτων.
 
-Sample JSON request::
+Sample JSON request with options::
 
     $ curl -X GET http://url/offers/index/orderby:rank/page:2 -H "Accept: application/json"
 
 
 .. note::
 
-    Για την χρήση παραμέτρων ταξινόμησης απαιτείται στο URI το **index**
+    Για την χρήση παραμέτρων ταξινόμησης απαιτείται στο URI το **index** οταν ζητάμε λίστα όλων των προσφορών.
 
 
 Offer Types
