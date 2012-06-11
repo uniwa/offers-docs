@@ -93,7 +93,6 @@ Sample JSON response::
                 "id": "4", 
                 "image_count": "0", 
                 "is_enabled": true, 
-                p
                 "latitude": null, 
                 "longitude": null, 
                 "modified": "2012-04-17 09:24:38", 
