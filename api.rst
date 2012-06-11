@@ -69,11 +69,13 @@ and on wrong credenials::
 Offer Index
 -----------
 
-====== =================== ===========
-Method Rest URI            Description
-====== =================== ===========
-GET    url/**offers**      Retrieve list of publicly available offers.
-====== =================== ===========
+====== ========================= ===========
+Method Rest URI                  Description
+====== ========================= ===========
+GET    url/**offers**            Retrieve list of publicly available offers. By default returns 1st page of results only.
+------ ------------------------- -----------
+GET    url/**index**/**offers**  Same as above, alternative URI.
+====== ========================= ===========
 
 Sample JSON request::
 
@@ -91,6 +93,7 @@ Sample JSON response::
                 "id": "4", 
                 "image_count": "0", 
                 "is_enabled": true, 
+                p
                 "latitude": null, 
                 "longitude": null, 
                 "modified": "2012-04-17 09:24:38", 
@@ -136,6 +139,36 @@ Sample JSON response::
 
     Για κάθε προσφορά επιστρέφονται και τα αντίστοιχα στοιχεία της επιχείρησης.
     Τα στοιχεία αυτά επιστρέφονται σε μια δεύτερη λίστα με το όνομα ``companies``.
+
+
+Request options
+
+============== =============== ===========
+Sort keyword   Sort value      Description
+============== =============== ===========
+orderby        *recent*        Sort by recent additions
+-------------- --------------- -----------
+orderby        *rank*          Sort by vote results (sum of votes)
+-------------- --------------- -----------
+orderby        *votes*         Sort by vote number (count)
+-------------- --------------- -----------
+orderby        *distance*      Sort by user distance, available only when user coordinates are set
+-------------- --------------- -----------
+page           *<num>*         Show only results page number = *<num>*
+============== =============== ===========
+
+.. note::
+
+    Από προεπιλογή επιστρέφεται μόνο η πρώτη σελίδα αποτελεσμάτων.
+
+Sample JSON request::
+
+    $ curl -X GET http://url/offers/index/orderby:rank/page:2 -H "Accept: application/json"
+
+
+.. note::
+
+    Για την χρήση παραμέτρων ταξινόμησης απαιτείται στο URI το **index**
 
 
 Offer Types
