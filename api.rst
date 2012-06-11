@@ -30,6 +30,7 @@ Sample XML request::
 
     $ curl -X POST http://url/users/login \
         -H "Content-Type: application/xml" \
+        -H "Accept: application/xml" \
         -d "<User><username>foo</username><password>bar</password></User>" \
         -c /tmp/cookie
 
@@ -37,6 +38,7 @@ Sample JSON request::
 
     $ curl -X POST http://url/users/login \
         -H "Content-Type: application/json" \
+        -H "Accept: application/json" \
         -d '{"User": {"username": "foo", "password": "bar"}}' \
         -c /tmp/cookie
 
@@ -48,6 +50,20 @@ Sample JSON request::
 .. note::
 
     Χρησιμοποιήστε μόνο διπλά quotes ``"`` στο JSON. Εξωτερικά απαιτούνται μονά quotes ``'`` για αποφυγή expansion από το shell.
+
+Sample JSON response on success::
+
+    {
+        "message": "Η αυθεντικοποίηση ολοκληρώθηκε με επιτυχία",
+        "status_code": 200
+    }
+
+and on wrong credenials::
+
+    {
+        "message": "Δώστε έγκυρο όνομα και κωδικό χρήστη",
+        "status_code": 403
+    }
 
 
 Offer Index
