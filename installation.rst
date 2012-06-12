@@ -7,7 +7,7 @@ Dependencies
 ------------
 
 * php >= 5.3.x
-* mysql >= 5.x
+* mysql >= 5.1.x *(also tested with MariaDB >= 5.2.x)*
 * python-sphinx *(to build documentation)*
 * git *(to clone directly from the repository)*
 
