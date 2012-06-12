@@ -83,8 +83,6 @@ Offer Index
 Method Rest URI                  Description
 ====== ========================= ===========
 GET    url/**offers**            Retrieve list of publicly available offers. By default returns 1st page of results only. Also see `Request options`_.
------- ------------------------- -----------
-GET    url/**index**/**offers**  Same as above, alternative URI.
 ====== ========================= ===========
 
 Sample JSON request::
