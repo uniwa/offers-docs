@@ -212,7 +212,7 @@ Offer View
 ====== ========================== ===========
 Method Rest URI                   Description
 ====== ========================== ===========
-GET    url/**offers**/*{offerId}* Retrieve info of offer with id *offerId*
+GET    url/**offer**/*{offerId}*  Retrieve info of offer with id *offerId*
 ====== ========================== ===========
 
 The following table describes the URI parameters.
@@ -227,7 +227,7 @@ offerId        string                     ID of offer
 
 Sample JSON request::
 
-    $ curl -X GET http://url/offers/17 -H "Accept: application/json"
+    $ curl -X GET http://url/offer/17 -H "Accept: application/json"
 
 
 Sample JSON response (offer type **HappyHour**)::
