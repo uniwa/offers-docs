@@ -414,7 +414,6 @@ Sample JSON response (offer type **Limited**)::
     }
 
 
-
 Offer Create
 ------------
 
