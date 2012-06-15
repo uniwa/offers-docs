@@ -591,8 +591,8 @@ Sample not found response ::
     <response status_code="404"><message>Not Found</message></response>
 
 
-Coupon List
------------
+Coupon Index
+------------
 
 ====== =========================== ===========
 Method Rest URI                    Description
