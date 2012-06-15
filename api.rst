@@ -591,6 +591,146 @@ Sample not found response ::
     <response status_code="404"><message>Not Found</message></response>
 
 
+Coupon List
+-----------
+
+====== =========================== ===========
+Method Rest URI                    Description
+====== =========================== ===========
+GET    url/**coupons**             Get a list of user's coupons
+====== =========================== ===========
+
+Sample JSON request ::
+
+    $ curl -s -X GET http://url/api/coupons \
+        -H "Accept: application/json" \
+        -b /tmp/cookie
+
+Sample JSON response ::
+
+    {
+        "coupons": [
+            {
+                "coupon": {
+                    "created": "2012-06-14 14:20:36", 
+                    "id": "3", 
+                    "serial_number": "0e9e3ae1-95a5-4e90-bd1a-7d5dd2cfd106"
+                }, 
+                "offer": {
+                    "company_id": "109", 
+                    "coupon_terms": "\u038c\u03c1\u03bf\u03b9 \u03b5\u03be\u03b1\u03c1\u03b3\u03cd\u03c1\u03c9\u03c3\u03b7\u03c2 \u03ba\u03bf\u03c5\u03c0\u03bf\u03bd\u03b9\u03bf\u03cd", 
+                    "description": "\u03a0\u03b5\u03c1\u03b9\u03b3\u03c1\u03b1\u03c6\u03ae \u03c0\u03c1\u03bf\u03c3\u03c6\u03bf\u03c1\u03ac\u03c2 \u03a0\u03c1\u03bf\u03c3\u03c6\u03bf\u03c1\u03ac 39", 
+                    "offer_category_id": "1", 
+                    "offer_type_id": "2", 
+                    "title": "\u03a0\u03c1\u03bf\u03c3\u03c6\u03bf\u03c1\u03ac 39", 
+                    "vote_count": "62", 
+                    "vote_sum": "7"
+                }
+            }, 
+            {
+                "coupon": {
+                    "created": "2012-06-14 14:20:30", 
+                    "id": "2", 
+                    "serial_number": "b5606315-b73a-49bf-ad91-f4a71f4642f9"
+                }, 
+                "offer": {
+                    "company_id": "122", 
+                    "coupon_terms": "\u038c\u03c1\u03bf\u03b9 \u03b5\u03be\u03b1\u03c1\u03b3\u03cd\u03c1\u03c9\u03c3\u03b7\u03c2 \u03ba\u03bf\u03c5\u03c0\u03bf\u03bd\u03b9\u03bf\u03cd", 
+                    "description": "\u03a0\u03b5\u03c1\u03b9\u03b3\u03c1\u03b1\u03c6\u03ae \u03c0\u03c1\u03bf\u03c3\u03c6\u03bf\u03c1\u03ac\u03c2 \u03a0\u03c1\u03bf\u03c3\u03c6\u03bf\u03c1\u03ac 98", 
+                    "offer_category_id": "8", 
+                    "offer_type_id": "2", 
+                    "title": "\u03a0\u03c1\u03bf\u03c3\u03c6\u03bf\u03c1\u03ac 98", 
+                    "vote_count": "82", 
+                    "vote_sum": "-55"
+                }
+            }, 
+            {
+                "coupon": {
+                    "created": "2012-06-14 10:06:50", 
+                    "id": "1", 
+                    "serial_number": "caccb026-2f2d-4d43-b70f-38e6d931cbd7"
+                }, 
+                "offer": {
+                    "company_id": "101", 
+                    "coupon_terms": "\u038c\u03c1\u03bf\u03b9 \u03b5\u03be\u03b1\u03c1\u03b3\u03cd\u03c1\u03c9\u03c3\u03b7\u03c2 \u03ba\u03bf\u03c5\u03c0\u03bf\u03bd\u03b9\u03bf\u03cd", 
+                    "description": "\u03a0\u03b5\u03c1\u03b9\u03b3\u03c1\u03b1\u03c6\u03ae \u03c0\u03c1\u03bf\u03c3\u03c6\u03bf\u03c1\u03ac\u03c2 \u03a0\u03c1\u03bf\u03c3\u03c6\u03bf\u03c1\u03ac 9", 
+                    "offer_category_id": "5", 
+                    "offer_type_id": "2", 
+                    "title": "\u03a0\u03c1\u03bf\u03c3\u03c6\u03bf\u03c1\u03ac 9", 
+                    "vote_count": "73", 
+                    "vote_sum": "-20"
+                }
+            }
+        ], 
+        "status_code": 200
+    }
+
+Sample XML request ::
+
+    $ curl -s -X GET http://url/api/coupons \
+        -H "Accept: application/xml" \
+        -b /tmp/cookie
+
+Sample XML response::
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <response status_code="200">
+      <coupons>
+        <offer>
+          <title>Προσφορά 39</title>
+          <description>Περιγραφή προσφοράς Προσφορά 39</description>
+          <coupon_terms>Όροι εξαργύρωσης κουπονιού</coupon_terms>
+          <offer_category_id>1</offer_category_id>
+          <offer_type_id>2</offer_type_id>
+          <vote_count>62</vote_count>
+          <vote_sum>7</vote_sum>
+          <company_id>109</company_id>
+        </offer>
+        <coupon id="3">
+          <serial_number>0e9e3ae1-95a5-4e90-bd1a-7d5dd2cfd106</serial_number>
+          <created>2012-06-14T14:20:36</created>
+        </coupon>
+      </coupons>
+      <coupons>
+        <offer>
+          <title>Προσφορά 98</title>
+          <description>Περιγραφή προσφοράς Προσφορά 98</description>
+          <coupon_terms>Όροι εξαργύρωσης κουπονιού</coupon_terms>
+          <offer_category_id>8</offer_category_id>
+          <offer_type_id>2</offer_type_id>
+          <vote_count>82</vote_count>
+          <vote_sum>-55</vote_sum>
+          <company_id>122</company_id>
+        </offer>
+        <coupon id="2">
+          <serial_number>b5606315-b73a-49bf-ad91-f4a71f4642f9</serial_number>
+          <created>2012-06-14T14:20:30</created>
+        </coupon>
+      </coupons>
+      <coupons>
+        <offer>
+          <title>Προσφορά 9</title>
+          <description>Περιγραφή προσφοράς Προσφορά 9</description>
+          <coupon_terms>Όροι εξαργύρωσης κουπονιού</coupon_terms>
+          <offer_category_id>5</offer_category_id>
+          <offer_type_id>2</offer_type_id>
+          <vote_count>73</vote_count>
+          <vote_sum>-20</vote_sum>
+          <company_id>101</company_id>
+        </offer>
+        <coupon id="1">
+          <serial_number>caccb026-2f2d-4d43-b70f-38e6d931cbd7</serial_number>
+          <created>2012-06-14T10:06:50</created>
+        </coupon>
+      </coupons>
+    </response>
+
+
+.. note::
+
+    - Για την ενέργεια απαιτείται αυθεντικοποίηση.
+    - Η ενέργεια είναι διαθέσιμη μόνο σε σπουδαστές.
+    - Επιστρέφονται τα κουπόνια του τρέχοντος σπουδαστή που έχει συνδεθεί, δεν απαιτείται κάποιο id.
 
 Coupon Get
 ----------
