@@ -732,6 +732,80 @@ Sample XML response::
     - Η ενέργεια είναι διαθέσιμη μόνο σε σπουδαστές.
     - Επιστρέφονται τα κουπόνια του τρέχοντος σπουδαστή που έχει συνδεθεί, δεν απαιτείται κάποιο id.
 
-Coupon Get
-----------
+Grab Coupon
+-----------
+
+====== =========================== ===========
+Method Rest URI                    Description
+====== =========================== ===========
+POST   url/**coupon**/*{offerId}*  Get coupon for offer with id *offerId*
+====== =========================== ===========
+
+Sample JSON request ::
+
+    $ curl -X POST http://url/coupon/1 \
+        -H "Accept: application/json" \
+        -b /tmp/cookie
+
+Sample JSON response::
+
+    {
+        "id": "9",
+        "message": "Το κουπόνι δεσμεύτηκε επιτυχώς",
+        "serial_number": "637d31b5-0760-4390-b164-0c2978f845d9",
+        "status_code": 200
+    }
+
+Sample XML request ::
+
+    $ curl -X POST http://url/coupon/1 \
+        -H "Accept: application/xml" \
+        -b /tmp/cookie
+
+Sample XML response::
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <response status_code="200">
+      <message>Το κουπόνι δεσμεύτηκε επιτυχώς</message>
+      <id>10</id>
+      <serial_number>d13f9aec-8d5c-4d52-90ef-794421f1b515</serial_number>
+    </response>
+
+Όταν ο σπουδαστής δεσμεύσει τον μέγιστο αριθμό κουπονιών επιστρέφεται **HTTP 400**.
+
+XML::
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <response status_code="400">
+      <message>Έχετε δεσμεύσει τον μέγιστο αριθμό κουπονιών για αυτήν την προσφορά.</message>
+    </response>
+
+JSON::
+
+    {
+        "message": "Έχετε δεσμεύσει τον μέγιστο αριθμό κουπονιών για αυτήν την προσφορά.",
+        "status_code": 400
+    }
+
+
+.. note::
+
+    - Για την ενέργεια απαιτείται αυθεντικοποίηση.
+    - Η ενέργεια είναι διαθέσιμη μόνο σε σπουδαστές.
+
+Όταν ο σπουδαστής δεν έχει αυθεντικοποιηθεί επιστρέφεται **HTTP 403**.
+
+XML::
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <response status_code="403">
+      <message>Forbidden</message>
+    </response>
+
+JSON::
+
+    {
+        "message": "Forbidden", 
+        "status_code": "403"
+    }
 
