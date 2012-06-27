@@ -13,6 +13,7 @@ Contents:
 
    installation
    api
+   schema
 
 
 Indices and tables
