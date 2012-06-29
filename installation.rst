@@ -16,6 +16,8 @@ Required php modules:
 * gd
 * ldap
 * mysql-pdo
+* openssl
+* soap
 
 Get source code
 ---------------
