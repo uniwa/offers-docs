@@ -767,3 +767,94 @@ JSON::
         "status_code": "403"
     }
 
+Όταν ο σπουδαστής δεσμεύσει τον μέγιστο αριθμό κουπονιών επιστρέφεται **HTTP 400**.
+
+
+Set coordinates
+---------------
+
+====== ======================================================== ===========
+Method Rest URI                                                 Description
+====== ======================================================== ===========
+GET    url/**users/coordinates**/lat:{latitude}/lng:{longitude}  Set location to {latitude}, {longitude}
+====== ======================================================== ===========
+
+Sample JSON request ::
+
+    $ curl -X GET http://url/users/coordinates/lat:55.496858/lng:9.747620 \
+        -H "Accept: application/json" \
+        -b /tmp/cookie
+
+Sample JSON response::
+
+    {
+        "message": "Οι συντεταγμένες αποθηκεύτηκαν (23.312345,87.19325)",
+        "status_code": 200
+    }
+
+Sample XML request ::
+
+    $ curl -X GET http://url/users/coordinates/lat:55.496858/lng:9.747620 \
+        -H "Accept: application/xml" \
+        -b /tmp/cookie
+
+Sample XML response::
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <response status_code="200">
+        <message>Οι συντεταγμένες αποθηκεύτηκαν (23.312345,87.19325)</message>
+    </response>
+
+
+Set search radius
+-----------------
+
+====== ================================= ============
+Method Rest URI                          Description
+====== ================================= ============
+GET    url/**users/radius**/{radius}     Set search radius to {radius} (in Km)
+====== ================================= ============
+
+Valid radius values:
+
++----------------+
+| {radius} in Km |
++================+
+| 1              |
++----------------+
+| 5              |
++----------------+
+| 10             |
++----------------+
+
+Sample JSON request ::
+
+    $ curl -X POST http://url/users/radius/5 \
+        -H "Accept: application/json" \
+        -b /tmp/cookie
+
+Sample JSON response::
+
+    {
+        "status_code":200,
+        "message":"Η ακτίνα αναζήτησης αποθηκεύτηκε με επιτυχία."
+    }
+
+
+Sample XML request ::
+
+    $ curl -X POST http://url/users/radius/5 \
+        -H "Accept: application/xml" \
+        -b /tmp/cookie
+
+Sample XML response::
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <response status_code="200">
+        <message>Η ακτίνα αναζήτησης αποθηκεύτηκε με επιτυχία.</message>
+    </response>
+
+.. note ::
+
+    Σε περίπτωση μη έγκυρου αριθμού ακτίνας, χρησιμοποιείται η μεγαλύτερη.
+
