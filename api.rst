@@ -414,48 +414,6 @@ Sample JSON response (offer type **Limited**)::
     }
 
 
-Offer Create
-------------
-
-====== ========================== ===========
-Method Rest URI                   Description
-====== ========================== ===========
-POST   url/**offer**              Create new offer
-====== ========================== ===========
-
-Request body::
-
-    TODO
-
-
-Offer Update
-------------
-
-====== ========================== ===========
-Method Rest URI                   Description
-====== ========================== ===========
-PUT    url/**offer**/*{offerId}*  Update offer with id *offerId*
-====== ========================== ===========
-
-Request body::
-
-    TODO
-
-
-Offer Delete
-------------
-
-====== ========================== ===========
-Method Rest URI                   Description
-====== ========================== ===========
-DELETE url/**offer**/*{offerId}*  Delete offer with id *offerId*
-====== ========================== ===========
-
-Request body::
-
-    TODO
-
-
 Coupon View
 -----------
 
