@@ -145,6 +145,20 @@ Sample JSON response::
                 "vote_sum": "0"
             },
         ],
+        "pagination": {
+            "count": 157, 
+            "current": 10, 
+            "limit": 10, 
+            "nextPage": true, 
+            "options": {
+                "conditions": []
+            },
+            "order": null, 
+            "page": 1, 
+            "pageCount": 16, 
+            "paramType": "named", 
+            "prevPage": false
+        },
         "status_code": 200
     }
 
