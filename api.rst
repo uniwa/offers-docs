@@ -82,7 +82,7 @@ and on wrong credenials::
     }
 
 
-Offer Index
+Offer Index (listing)
 -----------
 
 ====== ========================= ===========
