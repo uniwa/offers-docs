@@ -4,7 +4,7 @@ Coupons API reference
 Summary
 -------
 
-Το domain που χρησιμοποιείται για όλες τις κλίσεις είναι το::
+Το domain που χρησιμοποιείται για όλες τις κλήσεις είναι το::
 
     https://coupons.teiath.gr/api
 
