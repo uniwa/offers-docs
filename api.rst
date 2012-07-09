@@ -226,6 +226,22 @@ GET    url/**offers/limited**   Retrieve list of publicly available **Limited** 
 
     Υποστηρίζονται όλες οι παράμετροι που αναφέρονται στην ενότητα `Request options`_.
 
+Offer Categories
+----------------
+
+====== ====================================== ===========
+Method Rest URI                               Description
+====== ====================================== ===========
+GET    url/**offers/category**/*{categoryId}* Retrieve offers for category with id: *{categoryId}*
+====== ====================================== ===========
+
+Η απάντηση που επιστρέφουν τα παραπάνω URIs είναι αντίστοιχη με της ενότητας `Offer Index (listing)`_ .
+
+.. note::
+
+    Υποστηρίζονται όλες οι παράμετροι που αναφέρονται στην ενότητα `Request options`_.
+
+
 Offer View
 ----------
 
