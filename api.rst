@@ -100,31 +100,31 @@ Sample JSON response::
     {
         "companies": [
             {
-                "address": null, 
+                "address": "οδός Ρόδων 45", 
                 "afm": "011111111", 
                 "created": "2012-04-17 09:24:38", 
-                "fax": null, 
+                "fax": "2107654321", 
                 "id": "4", 
                 "image_count": "0", 
                 "is_enabled": true, 
-                "latitude": null, 
-                "longitude": null, 
+                "latitude": "37.94471", 
+                "longitude": "23.76706", 
                 "modified": "2012-04-17 09:24:38", 
-                "municipality_id": null, 
+                "municipality_id": "144", 
                 "name": "Pizza Fan", 
                 "phone": "2108112000", 
-                "postalcode": null, 
-                "service_type": null, 
+                "postalcode": "12345", 
+                "service_type": "Υπηρεσίες",
                 "user_id": "9"
             }
         ],
         "offers": [
             {
                 "autoend": null, 
-                "autostart": null, 
+                "autostart": "2012-07-14 18:00:00", 
                 "company_id": "4", 
                 "coupon_count": "0", 
-                "coupon_terms": null, 
+                "coupon_terms": "Εξαργύρωση μόνο μετά την λήξη", 
                 "created": "2012-04-17 12:49:56", 
                 "description": "40% για τους φοιτητές.", 
                 "ended": null, 
@@ -152,6 +152,12 @@ Sample JSON response::
 
     Για κάθε προσφορά επιστρέφονται και τα αντίστοιχα στοιχεία της επιχείρησης.
     Τα στοιχεία αυτά επιστρέφονται σε μια δεύτερη λίστα με το όνομα ``companies``.
+
+.. note::
+
+    * Το πεδίο ``ended`` συμπληρώνεται μετά το πέρας της προσφοράς.
+    * Το πεδίο ``autoend`` δέν έχει νόημα για τις κατηγορίες προσφορών happy hour και coupons.
+    * Το πεδίο ``autostart`` δέν έχει νόημα για την κατηγορία προσφορών happy hour.
 
 
 Request options
@@ -234,36 +240,36 @@ Sample JSON response (offer type **HappyHour**)::
 
     {
         "company": {
-            "address": null, 
+            "address": "οδός Ρόδων 45"", 
             "afm": "011111111", 
             "created": "2012-04-17 12:29:45", 
-            "fax": null, 
+            "fax": "2107654321", 
             "id": "8", 
             "image_count": "0", 
             "is_enabled": true, 
-            "latitude": null, 
-            "longitude": null, 
+            "latitude": "37.94471", 
+            "longitude": "23.76706", 
             "modified": "2012-04-17 12:29:45", 
-            "municipality_id": null, 
+            "municipality_id": 144, 
             "name": "Άρωμα Βύνης", 
             "phone": "2100000000", 
-            "postalcode": null, 
-            "service_type": null, 
+            "postalcode": "12345", 
+            "service_type": "Φαγητό", 
             "user_id": "13"
         }, 
         "offer": {
             "autoend": null, 
-            "autostart": null, 
+            "autostart": "2012-07-14 18:00:00", 
             "company_id": "8", 
             "coupon_count": "0", 
-            "coupon_terms": null, 
+            "coupon_terms": "Εξαργύρωση μόνο μετά την λήξη",
             "created": "2012-04-17 12:35:51", 
             "description": "Βαρελίσια μπύρα 330ml ΜΟΝΟ 2,5€",
             "ended": null, 
             "id": "14", 
             "image_count": "0", 
             "is_spam": false, 
-            "max_per_student": null, 
+            "max_per_student": 5, 
             "modified": "2012-04-17 12:35:51", 
             "offer_category": "Φαγητό", 
             "offer_hours": [
@@ -308,7 +314,7 @@ Sample JSON response (offer type **HappyHour**)::
             "started": "0000-00-00 00:00:00", 
             "tags": "άρωμα βύνης",
             "title": "Άρωμα Βύνης Happy Hours", 
-            "total_quantity": null, 
+            "total_quantity": 50, 
             "vote_count": "0", 
             "vote_sum": "0"
         }, 
@@ -321,14 +327,14 @@ Sample JSON response (offer type **Coupons**)::
         "company": {
             "address": "test address 28", 
             "afm": "011111111", 
-            "created": null, 
+            "created": "2012-04-17 12:49:56", 
             "fax": "0987654321", 
             "id": "1", 
             "image_count": "1", 
             "is_enabled": true, 
-            "latitude": null, 
-            "longitude": null, 
-            "modified": null, 
+            "latitude": "37.94471", 
+            "longitude": "23.76706", 
+            "modified": "2012-04-17 09:24:38", 
             "municipality_id": "13", 
             "name": "company_test_1", 
             "phone": "1234567890", 
@@ -338,7 +344,7 @@ Sample JSON response (offer type **Coupons**)::
         }, 
         "offer": {
             "autoend": null, 
-            "autostart": null, 
+            "autostart": "2012-07-14 18:00:00", 
             "company_id": "1", 
             "coupon_count": "0", 
             "coupon_terms": "", 
@@ -368,26 +374,26 @@ Sample JSON response (offer type **Limited**)::
 
     {
         "company": {
-            "address": null, 
+            "address": "οδός Ρόδων 45", 
             "afm": "011111111", 
             "created": "2012-04-17 09:24:38", 
-            "fax": null, 
+            "fax": "2102345676", 
             "id": "4", 
             "image_count": "0", 
             "is_enabled": true, 
-            "latitude": null, 
-            "longitude": null, 
+            "latitude": "37.94471", 
+            "longitude": "23.76706", 
             "modified": "2012-04-17 09:24:38", 
-            "municipality_id": null, 
+            "municipality_id": "144", 
             "name": "Pizza Fan", 
             "phone": "2108112000", 
-            "postalcode": null, 
-            "service_type": null, 
+            "postalcode": "11122", 
+            "service_type": "Υπηρεσίες", 
             "user_id": "9"
         }, 
         "offer": {
             "autoend": null, 
-            "autostart": null, 
+            "autostart": "2012-07-14 18:00:00", 
             "company_id": "4", 
             "coupon_count": "0", 
             "coupon_terms": null, 
