@@ -83,7 +83,7 @@ and on wrong credenials::
 
 
 Offer Index (listing)
------------
+---------------------
 
 ====== ========================= ===========
 Method Rest URI                  Description
