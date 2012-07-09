@@ -220,7 +220,7 @@ GET    url/**offers/coupons**   Retrieve list of publicly available **Coupons** 
 GET    url/**offers/limited**   Retrieve list of publicly available **Limited** offers.
 ====== ======================== ===========
 
-Η απάντηση που επιστρέφουν τα παραπάνω URIs είναι αντίστοιχη με της ενότητας `Offer Index`_ .
+Η απάντηση που επιστρέφουν τα παραπάνω URIs είναι αντίστοιχη με της ενότητας `Offer Index (listing)`_ .
 
 .. note::
 
