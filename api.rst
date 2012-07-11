@@ -138,6 +138,9 @@ Sample JSON response::
                 "offer_state": "active", 
                 "offer_type": "limited", 
                 "started": "2012-01-01 00:00:00", 
+                "student_vote": {
+                    "vote_type": 0
+                }, 
                 "tags": "pizza fan πίτσα", 
                 "title": "Pizza Fan 40 τοις εκατό", 
                 "total_quantity": "0", 
@@ -342,6 +345,9 @@ Sample JSON response (offer type **HappyHour**)::
             "offer_state": "active", 
             "offer_type": "happy hour", 
             "started": "0000-00-00 00:00:00", 
+            "student_vote": {
+                "vote_type": 1
+            }, 
             "tags": "άρωμα βύνης",
             "title": "Άρωμα Βύνης Happy Hours", 
             "total_quantity": 50, 
@@ -391,6 +397,9 @@ Sample JSON response (offer type **Coupons**)::
             "offer_state": "active", 
             "offer_type": "coupons", 
             "started": "2012-05-20 14:00:00", 
+            "student_vote": {
+                "vote_type": null
+            }, 
             "tags": "γραφείο", 
             "title": "test", 
             "total_quantity": "100", 
@@ -441,6 +450,9 @@ Sample JSON response (offer type **Limited**)::
             "offer_type": "limited", 
             "started": "2012-01-01 00:00:00", 
             "tags": "pizza fan πίτσα", 
+            "student_vote": {
+                "vote_type": 0
+            }, 
             "title": "Pizza Fan 40 τοις εκατό", 
             "total_quantity": null, 
             "vote_count": "0", 
@@ -504,6 +516,9 @@ Sample JSON response ::
             "offer_type_id": "2", 
             "started": "2012-01-01 00:00:00", 
             "tags": "λήμμα-31 λήμμα-1 λήμμα-4", 
+            "student_vote": {
+                "vote_type": 0
+            }, 
             "title": "Προσφορά 9", 
             "total_quantity": "60", 
             "vote_count": "73", 
@@ -545,6 +560,9 @@ Sample XML response ::
         <is_spam>0</is_spam>
         <vote_count>73</vote_count>
         <vote_sum>-20</vote_sum>
+        <student_vote>
+            <vote_type>0</vote_type>
+        </student_vote>
       </offer>
       <coupon id="1">
         <serial_number>caccb026-2f2d-4d43-b70f-38e6d931cbd7</serial_number>
@@ -618,7 +636,10 @@ Sample JSON response ::
                     "offer_type_id": "2", 
                     "title": "Προσφορά 39", 
                     "vote_count": "62", 
-                    "vote_sum": "7"
+                    "vote_sum": "7",
+                    "student_vote": {
+                        "vote_type": null
+                    }, 
                 }
             }, 
             {
@@ -635,7 +656,10 @@ Sample JSON response ::
                     "offer_type_id": "2", 
                     "title": "Προσφορά  98", 
                     "vote_count": "82", 
-                    "vote_sum": "-55"
+                    "vote_sum": "-55",
+                    "student_vote": {
+                        "vote_type": null
+                    }, 
                 }
             }, 
             {
@@ -652,7 +676,10 @@ Sample JSON response ::
                     "offer_type_id": "2", 
                     "title": "Προσφορά 9", 
                     "vote_count": "73", 
-                    "vote_sum": "-20"
+                    "vote_sum": "-20",
+                    "student_vote": {
+                        "vote_type": null
+                    }, 
                 }
             }
         ], 
@@ -679,6 +706,9 @@ Sample XML response::
           <vote_count>62</vote_count>
           <vote_sum>7</vote_sum>
           <company_id>109</company_id>
+          <student_vote>
+            <vote_type/>
+          </student_vote>
         </offer>
         <coupon id="3">
           <serial_number>0e9e3ae1-95a5-4e90-bd1a-7d5dd2cfd106</serial_number>
@@ -695,6 +725,9 @@ Sample XML response::
           <vote_count>82</vote_count>
           <vote_sum>-55</vote_sum>
           <company_id>122</company_id>
+          <student_vote>
+            <vote_type/>
+          </student_vote>
         </offer>
         <coupon id="2">
           <serial_number>b5606315-b73a-49bf-ad91-f4a71f4642f9</serial_number>
@@ -711,6 +744,9 @@ Sample XML response::
           <vote_count>73</vote_count>
           <vote_sum>-20</vote_sum>
           <company_id>101</company_id>
+          <student_vote>
+            <vote_type/>
+          </student_vote>
         </offer>
         <coupon id="1">
           <serial_number>caccb026-2f2d-4d43-b70f-38e6d931cbd7</serial_number>
