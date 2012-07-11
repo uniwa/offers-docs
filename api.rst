@@ -894,3 +894,50 @@ Sample XML response::
 
     Σε περίπτωση μη έγκυρου αριθμού ακτίνας, χρησιμοποιείται η μεγαλύτερη.
 
+
+Offer Vote
+----------
+
+====== ==================================== ===========
+Method Rest URI                             Description
+====== ==================================== ===========
+GET    url/**vote/vote_up**/*{offerId}*     Upvote the offer with id *{offerId}*
+------ ------------------------------------ -----------
+GET    url/**vote/vote_down**/*{offerId}*   Downvote the offer with id *{offerId}*
+------ ------------------------------------ -----------
+GET    url/**vote/vote_cancel**/*{offerId}* Cancel vote for offer with id *{offerId}*
+====== ==================================== ===========
+
+
+Sample JSON response for upvote::
+
+    {
+        "status_code": 200, 
+        "vote": {
+            "offer_id": "1", 
+            "vote_type": 1
+        }
+    }
+
+Sample XML response for upvote::
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <response status_code="200">
+      <vote>
+        <offer_id>1</offer_id>
+        <vote_type>1</vote_type>
+      </vote>
+    </response>
+
+
+Vote type table:
+
+============ ====================================
+vote type    interpretation
+============ ====================================
+**1**        upvote (+1 at web)
+------------ ------------------------------------
+**0**        downvote (-1 at web)
+------------ ------------------------------------
+**null**     student hasn't voted yet
+============ ====================================
