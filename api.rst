@@ -981,3 +981,148 @@ vote type    interpretation
 ------------ ------------------------------------
 **null**     student hasn't voted yet
 ============ ====================================
+
+
+Offer Categories/Types counters
+-------------------------------
+
+====== ================================= ============
+Method Rest URI                          Description
+====== ================================= ============
+GET    url/**offers/statistics**         Return taxonomy with offer counters
+====== ================================= ============
+
+Sample JSON request::
+
+    curl -s -X GET http://url/offers/statistics \
+        -H "Accept: application/json"
+
+Sample JSON response::
+
+    {
+        "categories": [
+            {
+                "id": "1", 
+                "name": "Φαγητό", 
+                "offer_count": "23"
+            }, 
+            {
+                "id": "2", 
+                "name": "Υπηρεσίες", 
+                "offer_count": "17"
+            }, 
+            {
+                "id": "3", 
+                "name": "Δραστηριότητες & Χόμπι",
+                "offer_count": "17"
+            }, 
+            {
+                "id": "4", 
+                "name": "Ένδυση & Υπόδηση",
+                "offer_count": "24"
+            }, 
+            {
+                "id": "5", 
+                "name": "Υγεία",
+                "offer_count": "17"
+            }, 
+            {
+                "id": "6", 
+                "name": "Ταξίδια & Εκδρομές",
+                "offer_count": "18"
+            }, 
+            {
+                "id": "7", 
+                "name": "Διασκέδαση",
+                "offer_count": "20"
+            }, 
+            {
+                "id": "8", 
+                "name": "Προϊόντα",
+                "offer_count": "21"
+            }
+        ], 
+        "status_code": 200, 
+        "total_offers": 157, 
+        "types": [
+            {
+                "id": 3, 
+                "name": "limited", 
+                "offer_count": "64"
+            }, 
+            {
+                "id": 1, 
+                "name": "happy hour", 
+                "offer_count": "38"
+            }, 
+            {
+                "id": 2, 
+                "name": "coupons", 
+                "offer_count": "55"
+            }
+        ]
+    }
+
+Sample XML response::
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <response status_code="200">
+      <total_offers>157</total_offers>
+      <types>
+        <id>3</id>
+        <name>limited</name>
+        <offer_count>64</offer_count>
+      </types>
+      <types>
+        <id>1</id>
+        <name>happy hour</name>
+        <offer_count>38</offer_count>
+      </types>
+      <types>
+        <id>2</id>
+        <name>coupons</name>
+        <offer_count>55</offer_count>
+      </types>
+      <categories>
+        <id>1</id>
+        <name>Φαγητό</name>
+        <offer_count>23</offer_count>
+      </categories>
+      <categories>
+        <id>2</id>
+        <name>Υπηρεσίες</name>
+        <offer_count>17</offer_count>
+      </categories>
+      <categories>
+        <id>3</id>
+        <name>Δραστηριότητες & Χόμπι</name>
+        <offer_count>17</offer_count>
+      </categories>
+      <categories>
+        <id>4</id>
+        <name>Ένδυση & Υπόδηση</name>
+        <offer_count>24</offer_count>
+      </categories>
+      <categories>
+        <id>5</id>
+        <name>Υγεία</name>
+        <offer_count>17</offer_count>
+      </categories>
+      <categories>
+        <id>6</id>
+        <name>Ταξίδια & Εκδρομές</name>
+        <offer_count>18</offer_count>
+      </categories>
+      <categories>
+        <id>7</id>
+        <name>Διασκέδαση</name>
+        <offer_count>20</offer_count>
+      </categories>
+      <categories>
+        <id>8</id>
+        <name>Προϊόντα</name>
+        <offer_count>21</offer_count>
+      </categories>
+    </response>
+
+
