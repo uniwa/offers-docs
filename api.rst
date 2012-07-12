@@ -141,6 +141,9 @@ Sample JSON response::
                 "student_vote": {
                     "vote_type": 0
                 }, 
+                "student_coupon": {
+                    "enabled": 0
+                },
                 "tags": "pizza fan πίτσα", 
                 "title": "Pizza Fan 40 τοις εκατό", 
                 "total_quantity": "0", 
@@ -179,6 +182,16 @@ Sample JSON response::
 .. note::
 
     Το πεδιο ``student_vote`` είναι διαθέσιμο μόνο σε σπουδαστές και μόνο μετά από σύνδεση στο σύστημα.
+
+.. note::
+
+    * Το πεδίο ``student_coupon`` είναι διαθέσιμο μόνο σε σπουδαστές, μετά απο σύνδεση στο σύστημα και 
+      έχει νόημα μόνο για προσφορές τύπου ``coupons``.
+
+    * Οι δυνατές τιμές είναι 0 και 1 οι οποίες υποδηλώνουν ότι ο χρήστης δεν μπορεί ή μπορεί να δεσμεύσει
+      κουπόνι αντίστοιχα.
+
+    * Σε άλλου τύπου προσφορές ή αν ο χρήστης δεν είναι συνδεδεμένος το πεδίο απουσιάζει
 
 
 Request options
@@ -404,6 +417,9 @@ Sample JSON response (offer type **Coupons**)::
             "student_vote": {
                 "vote_type": null
             }, 
+            "student_coupon": {
+                "enabled": 1
+            },
             "tags": "γραφείο", 
             "title": "test", 
             "total_quantity": "100", 
