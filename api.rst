@@ -446,7 +446,7 @@ Sample JSON response (offer type **Limited**)::
             "id": "17", 
             "image_count": "0", 
             "is_spam": false, 
-            "max_per_student": null, 
+            "max_per_student": 0, 
             "modified": "2012-04-17 12:49:56", 
             "offer_category": "Φαγητό", 
             "offer_hours": [], 
