@@ -44,7 +44,7 @@ JSON Request body::
 
 Sample XML request::
 
-    $ curl -X POST http://url/users/login \
+    $ curl -X POST http://coupons.edu.teiath.gr/api/users/login \
         -H "Content-Type: application/xml" \
         -H "Accept: application/xml" \
         -d "<User><username>foo</username><password>bar</password></User>" \
@@ -52,7 +52,7 @@ Sample XML request::
 
 Sample JSON request::
 
-    $ curl -X POST http://url/users/login \
+    $ curl -X POST http://coupons.edu.teiath.gr/api/users/login \
         -H "Content-Type: application/json" \
         -H "Accept: application/json" \
         -d '{"User": {"username": "foo", "password": "bar"}}' \
@@ -219,7 +219,7 @@ page           *<num>*         Show only results page number = *<num>*
 
 Sample JSON request with options::
 
-    $ curl -X GET http://url/offers/index/orderby:rank/page:2 -H "Accept: application/json"
+    $ curl -X GET http://coupons.edu.teiath.gr/api/offers/index/orderby:rank/page:2 -H "Accept: application/json"
 
 
 .. note::
@@ -621,7 +621,7 @@ GET    url/**coupons**             Get a list of user's coupons
 
 Sample JSON request ::
 
-    $ curl -s -X GET http://url/api/coupons \
+    $ curl -s -X GET http://coupons.edu.teiath.gr/api/coupons \
         -H "Accept: application/json" \
         -b /tmp/cookie
 
@@ -695,7 +695,7 @@ Sample JSON response ::
 
 Sample XML request ::
 
-    $ curl -s -X GET http://url/api/coupons \
+    $ curl -s -X GET http://coupons.edu.teiath.gr/api/coupons \
         -H "Accept: application/xml" \
         -b /tmp/cookie
 
