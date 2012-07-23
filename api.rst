@@ -1129,3 +1129,134 @@ Sample XML response::
     </response>
 
 
+Search
+------
+
+====== ========================================== ============
+Method Rest URI                                   Description
+====== ========================================== ============
+GET    url/**search**/*contains:{search-string}*  Return search results
+====== ========================================== ============
+
+Sample search using JSON::
+
+    curl -X GET "http://url/search/contains:εμπόριο" \
+        -H "Accept: application/json" -s
+
+Response::
+
+    {
+        "companies": [
+            {
+                "address": "οδός Ρόδων 95",
+                "afm": "000000012", 
+                "created": "2012-04-17 12:49:56", 
+                "fax": "2107654321", 
+                "id": "101", 
+                "image_count": "0", 
+                "is_enabled": true, 
+                "latitude": "37.94471", 
+                "longitude": "23.76706", 
+                "modified": "2012-07-23 12:02:58", 
+                "municipality_id": "144", 
+                "name": "CQ ΕΜΠΟΡΙΟ ΑΠΟΘΗΚΕΥΣΗ ΔΙΑΝΟΜΗ ΠΡΟΙΟΝΤΩΝ ΚΑΙ ΠΑΡΟΧΗ ΥΠΗΡΕΣΙΩΝ ΣΥΣΚΕΥΑΣΙΑΣ ΤΥΠΟΠΟΙΗΣΗΣ ΚΑΘΑΡΙΣΜΩΝ ΜΟΝΟΠΡΟΣΩΠΗ ΕΤΑΙΡΕΙΑ"
+                "phone": "2101234567", 
+                "postalcode": "12345", 
+                "service_type": "Υπηρεσίες", 
+                "user_id": "101"
+            }
+        ], 
+        "offers": [
+            {
+                "autoend": null, 
+                "autostart": null, 
+                "company_id": "101", 
+                "coupon_count": "0", 
+                "coupon_terms": null, 
+                "created": "2012-07-20 13:46:03", 
+                "description": "happy hour test", 
+                "ended": null, 
+                "id": "275", 
+                "image_count": "0", 
+                "is_spam": false, 
+                "max_per_student": null, 
+                "modified": "2012-07-20 13:47:26", 
+                "offer_category": "Φαγητό",
+                "offer_hours": [
+                    {
+                        "day_id": "1", 
+                        "ending1": "07:30:00", 
+                        "ending2": "22:00:00", 
+                        "starting1": "04:30:00", 
+                        "starting2": "16:00:00"
+                    }, 
+                    {
+                        "day_id": "2", 
+                        "ending1": "22:00:00", 
+                        "starting1": "06:00:00"
+                    }, 
+                    {
+                        "day_id": "3", 
+                        "ending1": "18:00:00", 
+                        "ending2": "21:30:00", 
+                        "starting1": "16:30:00", 
+                        "starting2": "18:30:00"
+                    }, 
+                    {
+                        "day_id": "4", 
+                        "ending1": "14:00:00", 
+                        "starting1": "02:00:00"
+                    }
+                ], 
+                "offer_state": "active", 
+                "offer_type": "happy hour", 
+                "started": "2012-07-20 13:47:26", 
+                "tags": "derp", 
+                "title": "HH-test", 
+                "total_quantity": null, 
+                "vote_count": "0", 
+                "vote_minus": "0", 
+                "vote_plus": "0", 
+                "vote_sum": "0"
+            }, 
+
+    [ ouput truncated ]
+            { },
+            { },
+            { },
+            { },
+    [ ouput truncated ]
+        ], 
+        "pagination": {
+            "count": 5, 
+            "current": 5, 
+            "limit": 10, 
+            "nextPage": false, 
+            "options": {
+                "conditions": []
+            }, 
+            "order": null, 
+            "page": 1, 
+            "pageCount": 1, 
+            "paramType": "named", 
+            "prevPage": false
+        }, 
+        "status_code": 200
+    }
+
+
+.. note::
+
+    Η αναζήτηση πραγματοποιείται στα εξής πεδία:
+
+    Προσφορά:
+        * title
+        * description
+        * tags
+
+    Εταιρία:
+        * name
+
+.. note::
+
+    To αποτέλεσμα της ανατήτησης έχει το ίδιο format με το αποτέλεσμα της ενότητας `Offer Index (listing)`_ .
