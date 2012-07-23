@@ -325,38 +325,27 @@ Sample JSON response (offer type **HappyHour**)::
             "offer_hours": [
                 {
                     "day_id": "1", 
-                    "ending": "04:00:00", 
-                    "starting": "23:00:00"
+                    "ending1": "07:30:00", 
+                    "ending2": "22:00:00", 
+                    "starting1": "04:30:00", 
+                    "starting2": "16:00:00"
                 }, 
                 {
                     "day_id": "2", 
-                    "ending": "04:00:00", 
-                    "starting": "23:00:00"
+                    "ending1": "22:00:00", 
+                    "starting1": "06:00:00"
                 }, 
                 {
                     "day_id": "3", 
-                    "ending": "04:00:00", 
-                    "starting": "23:00:00"
+                    "ending1": "18:00:00", 
+                    "ending2": "21:30:00", 
+                    "starting1": "16:30:00", 
+                    "starting2": "18:30:00"
                 }, 
                 {
                     "day_id": "4", 
-                    "ending": "04:00:00", 
-                    "starting": "23:00:00"
-                }, 
-                {
-                    "day_id": "5", 
-                    "ending": "04:00:00", 
-                    "starting": "23:00:00"
-                }, 
-                {
-                    "day_id": "6", 
-                    "ending": "04:00:00", 
-                    "starting": "23:00:00"
-                }, 
-                {
-                    "day_id": "7", 
-                    "ending": "04:00:00", 
-                    "starting": "23:00:00"
+                    "ending1": "14:00:00", 
+                    "starting1": "02:00:00"
                 }
             ], 
             "offer_state": "active", 
@@ -542,8 +531,7 @@ Sample JSON response ::
             "title": "Προσφορά 9", 
             "total_quantity": "60", 
             "vote_count": "73", 
-            "vote_sum": "-20", 
-            "work_hour_count": "0"
+            "vote_sum": "-20"
         }, 
         "status_code": 200, 
         "student": {
@@ -575,7 +563,6 @@ Sample XML response ::
         <offer_type_id>2</offer_type_id>
         <company_id>101</company_id>
         <image_count>0</image_count>
-        <work_hour_count>0</work_hour_count>
         <offer_state_id>2</offer_state_id>
         <is_spam>0</is_spam>
         <vote_count>73</vote_count>
