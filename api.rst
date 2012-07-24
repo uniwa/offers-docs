@@ -506,6 +506,7 @@ Sample JSON response ::
             "id": "1", 
             "offer_id": "9", 
             "serial_number": "caccb026-2f2d-4d43-b70f-38e6d931cbd7", 
+            "reinserted": "1",
             "student_id": "4"
         }, 
         "offer": {
@@ -576,6 +577,7 @@ Sample XML response ::
         <created>2012-06-14T10:06:50</created>
         <offer_id>9</offer_id>
         <student_id>4</student_id>
+        <reinserted>1</reinserted>
       </coupon>
       <student id="4">
         <firstname>latsas</firstname>
@@ -609,6 +611,12 @@ Sample not found response ::
     <?xml version="1.0" encoding="UTF-8"?>
     <response status_code="404"><message>Not Found</message></response>
 
+.. note::
+
+    Το πεδίο `reinserted` υποδυκνείει εάν το κουπόνι έχει αποδεσμευθεί ή όχι.
+    Η τιμή `1` δείχνει αποδεσμευμένο κουπόνι και η τιμή `0` ότι το κουπόνι είναι σε
+    ισχύ και ο χρήστης είναι ακόμα ο κάτοχος του κουπονιού. Δες: `Coupon release (reinsert)`_ .
+
 
 Coupon Index
 ------------
@@ -633,7 +641,8 @@ Sample JSON response ::
                 "coupon": {
                     "created": "2012-06-14 14:20:36", 
                     "id": "3", 
-                    "serial_number": "0e9e3ae1-95a5-4e90-bd1a-7d5dd2cfd106"
+                    "serial_number": "0e9e3ae1-95a5-4e90-bd1a-7d5dd2cfd106",
+                    "reinserted": "0"
                 }, 
                 "offer": {
                     "company_id": "109", 
@@ -769,6 +778,13 @@ Sample XML response::
     - Η ενέργεια είναι διαθέσιμη μόνο σε σπουδαστές.
     - Επιστρέφονται τα κουπόνια του τρέχοντος σπουδαστή που έχει συνδεθεί, δεν απαιτείται κάποιο id.
 
+.. note::
+
+    Το πεδίο `reinserted` υποδυκνείει εάν το κουπόνι έχει αποδεσμευθεί ή όχι.
+    Η τιμή `1` δείχνει αποδεσμευμένο κουπόνι και η τιμή `0` ότι το κουπόνι είναι σε
+    ισχύ και ο χρήστης είναι ακόμα ο κάτοχος του κουπονιού. Δες: `Coupon release (reinsert)`_ .
+
+
 Grab Coupon
 -----------
 
@@ -847,6 +863,34 @@ JSON::
     }
 
 Όταν ο σπουδαστής δεσμεύσει τον μέγιστο αριθμό κουπονιών επιστρέφεται **HTTP 400**.
+
+
+Coupon release (reinsert)
+-------------------------
+
+====== ======================================================== ===========
+Method Rest URI                                                 Description
+====== ======================================================== ===========
+GET    url/**coupons/reinsert**/*{couponId}*                    Release coupon with id: *{couponId}*
+====== ======================================================== ===========
+
+Αποδεσμεύει το κουπόνι. Ο χρήστης παύει να είναι ο κάτοχος του κουπονιού και
+η ισχύς του κουπονιού ακυρώνεται. Απαιτείται αυθεντικοποίηση.
+
+Sample JSON request ::
+
+    $ curl -X GET http://coupons.edu.teiath.gr/api/coupons/reinsert/10
+        -H "Accept: application/json" \
+        -b /tmp/cookie
+
+Sample JSON response ::
+
+    {
+        "id": "10", 
+        "message": "Το κουπόνι f617a0bf-e628-4823-92b7-1954286d934d αποδεσμεύτηκε επιτυχώς", 
+        "serial_number": "f617a0bf-e628-4823-92b7-1954286d934d", 
+        "status_code": 200
+    }
 
 
 Set coordinates
@@ -1260,3 +1304,4 @@ Response::
 .. note::
 
     To αποτέλεσμα της ανατήτησης έχει το ίδιο format με το αποτέλεσμα της ενότητας `Offer Index (listing)`_ .
+
