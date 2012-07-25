@@ -1091,6 +1091,10 @@ Sample JSON response::
         ], 
         "status_code": 200, 
         "total_offers": 157, 
+        "my_stats": {
+            "coupon_count": null, 
+            "vote_count": null
+        },
         "types": [
             {
                 "id": 3, 
@@ -1114,63 +1118,71 @@ Sample XML response::
 
     <?xml version="1.0" encoding="UTF-8"?>
     <response status_code="200">
-      <total_offers>157</total_offers>
+      <total_offers>102</total_offers>
       <types>
-        <id>3</id>
-        <name>limited</name>
-        <offer_count>64</offer_count>
+        <type>
+          <id>1</id>
+          <name>happy hour</name>
+          <offer_count>42</offer_count>
+        </type>
+        <type>
+          <id>2</id>
+          <name>coupons</name>
+          <offer_count>24</offer_count>
+        </type>
+        <type>
+          <id>3</id>
+          <name>limited</name>
+          <offer_count>36</offer_count>
+        </type>
       </types>
-      <types>
-        <id>1</id>
-        <name>happy hour</name>
-        <offer_count>38</offer_count>
-      </types>
-      <types>
-        <id>2</id>
-        <name>coupons</name>
-        <offer_count>55</offer_count>
-      </types>
       <categories>
-        <id>1</id>
-        <name>Φαγητό</name>
-        <offer_count>23</offer_count>
+        <category>
+          <type>
+            <id>1</id>
+            <name>happy hour</name>
+            <offer_count>42</offer_count>
+          </type>
+          <type>
+            <id>2</id>
+            <name>coupons</name>
+            <offer_count>24</offer_count>
+          </type>
+          <type>
+            <id>3</id>
+            <name>limited</name>
+            <offer_count>36</offer_count>
+          </type>
+        </category>
       </categories>
-      <categories>
-        <id>2</id>
-        <name>Υπηρεσίες</name>
-        <offer_count>17</offer_count>
-      </categories>
-      <categories>
-        <id>3</id>
-        <name>Δραστηριότητες & Χόμπι</name>
-        <offer_count>17</offer_count>
-      </categories>
-      <categories>
-        <id>4</id>
-        <name>Ένδυση & Υπόδηση</name>
-        <offer_count>24</offer_count>
-      </categories>
-      <categories>
-        <id>5</id>
-        <name>Υγεία</name>
-        <offer_count>17</offer_count>
-      </categories>
-      <categories>
-        <id>6</id>
-        <name>Ταξίδια & Εκδρομές</name>
-        <offer_count>18</offer_count>
-      </categories>
-      <categories>
-        <id>7</id>
-        <name>Διασκέδαση</name>
-        <offer_count>20</offer_count>
-      </categories>
-      <categories>
-        <id>8</id>
-        <name>Προϊόντα</name>
-        <offer_count>21</offer_count>
-      </categories>
+      <my_stats>
+        <coupon_count/>
+        <vote_count/>
+      </my_stats>
     </response>
+
+
+.. note::
+
+    Για να επιστραφεί το πλήθος των ψήφων και το πλήθος των κουπονιών του χρήστη, πρέπει να έχει
+    επιτυχώς αυθεντικοποιηθεί στο σύστημα.
+
+
+Πλήθος ψήφων/κουπονιών (JSON)::
+
+    "my_stats": {
+        "coupon_count": 9, 
+        "vote_count": 4
+    },
+
+
+Πλήθος ψήφων/κουπονιών (XML)::
+
+    <my_stats>
+        <coupon_count>9</coupon_count>
+        <vote_count>4</vote_count>
+    </my_stats>
+
 
 
 Search
