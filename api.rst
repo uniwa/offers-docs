@@ -1041,7 +1041,7 @@ GET    url/**offers/statistics**         Return taxonomy with offer counters
 
 Sample JSON request::
 
-    curl -s -X GET http://url/offers/statistics \
+    curl -s -X GET http://coupons.edu.teiath.gr/api/offers/statistics \
         -H "Accept: application/json"
 
 Sample JSON response::
