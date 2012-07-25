@@ -1030,8 +1030,8 @@ vote type    interpretation
 ============ ====================================
 
 
-Offer Categories/Types counters
--------------------------------
+Offer Statistics (counters)
+---------------------------
 
 ====== ================================= ============
 Method Rest URI                          Description
