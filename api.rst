@@ -1030,6 +1030,97 @@ vote type    interpretation
 ============ ====================================
 
 
+User Votes (listing)
+--------------------
+
+====== ==================================== ===========
+Method Rest URI                             Description
+====== ==================================== ===========
+GET    url/**votes**                        Return logged-in user's votes
+====== ==================================== ===========
+
+Επιστρέφει όλες τις προσφορές που έχει ψηφίσει ο συνδεδεμένος σπουδαστής.
+Η ψήφος του χρήστη για μια συγκεκριμένη προσφορά επιστρέφεται στο πεδίο `vote`
+το οποίο μπορεί να περιέχει `1` (θετική ψήφος) ή `0` (αρνητική ψήφος).
+
+.. note::
+
+    Απαιτείται αυθεντικοποίηση.
+
+Sample JSON request::
+
+    $ curl -s -X GET 'http://coupons.edu.teiath.gr/api/votes/' \
+        -H "Accept: application/json" -b /tmp/cookie
+
+
+Sample JSON response::
+
+    {
+        "status_code": 200, 
+        "votes": [
+            {
+                "offer": {
+                    "id": "48", 
+                    "title": "Προσφορά 48",
+                    "vote_count": "81", 
+                    "vote_minus": "44", 
+                    "vote_plus": "37", 
+                    "vote_sum": -7
+                }, 
+                "vote": 1
+            }, 
+            {
+                "offer": {
+                    "id": "264", 
+                    "title": "Προσφορά 264",
+                    "vote_count": "91", 
+                    "vote_minus": "54", 
+                    "vote_plus": "37", 
+                    "vote_sum": -17
+                }, 
+                "vote": 1
+            }
+        ]
+    }
+
+
+Sample XML request::
+
+    $ curl -s -X GET 'http://coupons.edu.teiath.gr/api/votes/' \
+        -H "Accept: application/xml" -b /tmp/cookie
+
+
+Sample XML response::
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <response status_code="200">
+      <votes>
+        <vote_info>
+          <vote>1</vote>
+          <offer>
+            <id>48</id>
+            <title>Προσφορά 48</title>
+            <vote_count>81</vote_count>
+            <vote_plus>37</vote_plus>
+            <vote_minus>44</vote_minus>
+            <vote_sum>-7</vote_sum>
+          </offer>
+        </vote_info>
+        <vote_info>
+          <vote>1</vote>
+          <offer>
+            <id>264</id>
+            <title>Προσφορά 264</title>
+            <vote_count>91</vote_count>
+            <vote_plus>37</vote_plus>
+            <vote_minus>54</vote_minus>
+            <vote_sum>-17</vote_sum>
+          </offer>
+        </vote_info>
+      </votes>
+    </response>
+
+
 Offer Statistics (counters)
 ---------------------------
 
