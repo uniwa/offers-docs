@@ -1081,6 +1081,7 @@ Sample JSON response::
             {
                 "offer": {
                     "id": "48", 
+                    "offer_type_id": "2",
                     "title": "Προσφορά 48",
                     "vote_count": "81", 
                     "vote_minus": "44", 
@@ -1092,6 +1093,7 @@ Sample JSON response::
             {
                 "offer": {
                     "id": "264", 
+                    "offer_type_id": "2",
                     "title": "Προσφορά 264",
                     "vote_count": "91", 
                     "vote_minus": "54", 
@@ -1119,6 +1121,7 @@ Sample XML response::
           <vote>1</vote>
           <offer>
             <id>48</id>
+            <offer_type_id>2</offer_type_id>
             <title>Προσφορά 48</title>
             <vote_count>81</vote_count>
             <vote_plus>37</vote_plus>
@@ -1130,6 +1133,7 @@ Sample XML response::
           <vote>1</vote>
           <offer>
             <id>264</id>
+            <offer_type_id>2</offer_type_id>
             <title>Προσφορά 264</title>
             <vote_count>91</vote_count>
             <vote_plus>37</vote_plus>
