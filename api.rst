@@ -658,6 +658,7 @@ Sample JSON response ::
                     "reinserted": "0"
                 }, 
                 "offer": {
+                    "id": 100",
                     "company_id": "109", 
                     "coupon_terms": "Όροι εξαργύρωσης κουπονιού", 
                     "description": "Περιγραφή προσφοράς Προσφορά 39", 
@@ -678,6 +679,7 @@ Sample JSON response ::
                     "serial_number": "b5606315-b73a-49bf-ad91-f4a71f4642f9"
                 }, 
                 "offer": {
+                    "id": 101",
                     "company_id": "122", 
                     "coupon_terms": "Όροι εξαργύρωσης κουπονιού", 
                     "description": "Περιγραφή προσφοράς Προσφορά 98", 
@@ -698,6 +700,7 @@ Sample JSON response ::
                     "serial_number": "caccb026-2f2d-4d43-b70f-38e6d931cbd7"
                 }, 
                 "offer": {
+                    "id": 102",
                     "company_id": "101", 
                     "coupon_terms": "Όροι εξαργύρωσης κουπονιού", 
                     "description": "Περιγραφή προσφοράς Προσφορά 9", 
@@ -726,7 +729,7 @@ Sample XML response::
     <?xml version="1.0" encoding="UTF-8"?>
     <response status_code="200">
       <coupons>
-        <offer>
+        <offer id="101">
           <title>Προσφορά 39</title>
           <description>Περιγραφή προσφοράς Προσφορά 39</description>
           <coupon_terms>Όροι εξαργύρωσης κουπονιού</coupon_terms>
@@ -745,7 +748,7 @@ Sample XML response::
         </coupon>
       </coupons>
       <coupons>
-        <offer>
+        <offer id="102">
           <title>Προσφορά 98</title>
           <description>Περιγραφή προσφοράς Προσφορά 98</description>
           <coupon_terms>Όροι εξαργύρωσης κουπονιού</coupon_terms>
@@ -764,7 +767,7 @@ Sample XML response::
         </coupon>
       </coupons>
       <coupons>
-        <offer>
+        <offer id="103">
           <title>Προσφορά 9</title>
           <description>Περιγραφή προσφοράς Προσφορά 9</description>
           <coupon_terms>Όροι εξαργύρωσης κουπονιού</coupon_terms>
