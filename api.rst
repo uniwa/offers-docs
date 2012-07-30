@@ -491,7 +491,7 @@ GET    url/**coupon**/*{couponId}* Get coupon info with id *couponId*
 
 Sample JSON request ::
 
-    $ curl -X POST http://url/coupon/1 \
+    $ curl -X GET http://coupons.edu.teiath.gr/api/coupon/1 \
         -H "Accept: application/json" \
         -b /tmp/cookie
 
@@ -969,7 +969,7 @@ Valid radius values:
 
 Sample JSON request ::
 
-    $ curl -X POST http://url/users/radius/5 \
+    $ curl -X GET http://coupons/edu.teiath.gr/api/users/radius/5 \
         -H "Accept: application/json" \
         -b /tmp/cookie
 
@@ -983,7 +983,7 @@ Sample JSON response::
 
 Sample XML request ::
 
-    $ curl -X POST http://url/users/radius/5 \
+    $ curl -X GET http://coupons/edu.teiath.gr/api/users/radius/5 \
         -H "Accept: application/xml" \
         -b /tmp/cookie
 
