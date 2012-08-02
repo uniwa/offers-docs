@@ -37,7 +37,11 @@ Repositories:
 Deploy
 ------
 
-Application setup: list of required configuration files and a list of the most important options.
+Application setup:
+
+* List of required configuration files and a list of the most important options.
+* Permissions.
+* Git submodules.
 
 Configuration files
 ^^^^^^^^^^^^^^^^^^^
@@ -74,17 +78,60 @@ Rename each ``*.php.default`` file to ``*.php`` and edit accordingly if required
     * ldap settings - set ldap credentials here
 
 
+Permissions
+^^^^^^^^^^^
+
+The following folders must be writable from the ``http`` user (or the relevant user that run the webserver).::
+
+    app
+    |-- tmp
+        |-- cache
+        |   |-- models
+        |   |-- persistent
+        |   `-- views
+        `-- logs
+
+
+Git submodules
+^^^^^^^^^^^^^^
+
+The application's front-end uses `Twitter's Bootstrap`_ through a `CakePHP helper`_.
+This helper is not optional. It resides inside the ``plugins`` folder found in the
+project's root directory as a `git submodule`_. In order to fetch the helper, after
+the first clone run: ::
+
+    $ git submodule init
+    $ git submodule update
+
+To keep up-to-date run: ::
+
+    $ git submodule foreach git pull
+
+
+Note that this will fetch any other posible git submodules used by the application.
+See the `project's .gitmodules`_ file for more information.
+
+.. _Twitter's Bootstrap: http://twitter.github.com/bootstrap
+.. _CakePHP helper: https://github.com/loadsys/twitter-bootstrap-helper
+.. _git submodule: http://git-scm.com/book/en/Git-Tools-Submodules
+.. _project's .gitmodules: http://git.edu.teiath.gr/coupons.git/tree/.gitmodules
+
+
 Database
 --------
 
-Database setup.
+Database setup:
+
+* From command line
+* From PHPMyAdmin
 
 From command line
 ^^^^^^^^^^^^^^^^^
 
 Run the setup script found in ``schema/reset-db.sh`` and provide the root username/password
 for your database when prompted. The database scripts assume you have the right to create
-databases. The default database created is named ``opendeals``.
+databases. The default database created is named ``opendeals``. Note that the script must be run
+from *within* the ``schema`` folder as it uses relative paths. `(TODO: fix)`
 
 From PHPMyAdmin
 ^^^^^^^^^^^^^^^
