@@ -125,13 +125,14 @@ Database setup:
 * From command line
 * From PHPMyAdmin
 
+
 From command line
 ^^^^^^^^^^^^^^^^^
 
 Run the setup script found in ``schema/reset-db.sh`` and provide the root username/password
 for your database when prompted. The database scripts assume you have the right to create
-databases. The default database created is named ``opendeals``. Note that the script must be run
-from *within* the ``schema`` folder as it uses relative paths. `(TODO: fix)`
+databases. The default database created is named ``opendeals``.
+
 
 From PHPMyAdmin
 ^^^^^^^^^^^^^^^
@@ -141,7 +142,6 @@ From PHPMyAdmin
 #. import ``counties.csv``, skiping the 1st row
 #. import ``municipalities.csv`` skipping the 1st row and re-arranging columns properly
 #. import ``offercategories.sql``
-
 
 
 Cron scripts
