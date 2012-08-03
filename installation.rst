@@ -75,7 +75,10 @@ Rename each ``*.php.default`` file to ``*.php`` and edit accordingly if required
 
 * **ldap.php.default**
 
-    * ldap settings - set ldap credentials here
+    * LDAP settings - set ldap credentials here
+    * if using LDAP with SSL remember that the ``port`` should remain empty and all parameters should
+      be in the ``server`` directive in a form of url. eg: ``ldaps://foo.com:port``.
+      See: `ldap_connect() <http://gr2.php.net/manual/en/function.ldap-connect.php>`_.
 
 
 Permissions
