@@ -667,6 +667,8 @@ Sample JSON response ::
                     "title": "Προσφορά 39", 
                     "vote_count": "62", 
                     "vote_sum": "7",
+                    "is_spam": "0", 
+                    "offer_state_id": "3",
                     "student_vote": {
                         "vote_type": null
                     }, 
@@ -688,6 +690,8 @@ Sample JSON response ::
                     "title": "Προσφορά  98", 
                     "vote_count": "82", 
                     "vote_sum": "-55",
+                    "is_spam": "1", 
+                    "offer_state_id": "3",
                     "student_vote": {
                         "vote_type": null
                     }, 
@@ -709,6 +713,8 @@ Sample JSON response ::
                     "title": "Προσφορά 9", 
                     "vote_count": "73", 
                     "vote_sum": "-20",
+                    "is_spam": "1", 
+                    "offer_state_id": "3",
                     "student_vote": {
                         "vote_type": null
                     }, 
@@ -736,6 +742,8 @@ Sample XML response::
           <offer_category_id>1</offer_category_id>
           <offer_type_id>2</offer_type_id>
           <vote_count>62</vote_count>
+          <is_spam>0</is_spam>
+          <offer_state_id>3</offer_state_id>
           <vote_sum>7</vote_sum>
           <company_id>109</company_id>
           <student_vote>
@@ -755,6 +763,8 @@ Sample XML response::
           <offer_category_id>8</offer_category_id>
           <offer_type_id>2</offer_type_id>
           <vote_count>82</vote_count>
+          <is_spam>1</is_spam>
+          <offer_state_id>3</offer_state_id>
           <vote_sum>-55</vote_sum>
           <company_id>122</company_id>
           <student_vote>
@@ -776,6 +786,8 @@ Sample XML response::
           <vote_count>73</vote_count>
           <vote_sum>-20</vote_sum>
           <company_id>101</company_id>
+          <is_spam>1</is_spam>
+          <offer_state_id>3</offer_state_id>
           <student_vote>
             <vote_type/>
           </student_vote>
@@ -803,6 +815,20 @@ Sample XML response::
 .. note::
 
     Οι τιμές των πεδίων `vote_type` συνοψίζονται στην ενότητα  `Offer Vote`_ .
+
+.. note::
+
+    Το πεδίο `is_spam` παίρνει τιμές `1` και `0`.
+
+.. note::
+
+    Το πεδίο `offer_state_id` παίνει τις τιμές:
+
+    - 1 => Προσφορά DRAFT (δεν έχει ενεργοποιηθεί ακόμα από τον επιχειρηματία).
+    - 2 => Ενεργή προσφορά.
+    - 3 => Προσφορά η οποία έχει λήξει.
+
+    Οι παραπάνω τιμές αντιστοιχούν στις `default τιμές <http://git.edu.teiath.gr/coupons.git/tree/app/Config/configuration.php.default>`_ της εφαρμογής.
 
 
 Grab Coupon
