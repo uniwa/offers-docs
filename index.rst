@@ -8,17 +8,13 @@ Welcome to coupons' documentation!
 
 Contents:
 
+.. globalindex::
+   :maxdepth: 1
+
 .. toctree::
    :maxdepth: 2
 
    installation
    api
    schema
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`search`
 
