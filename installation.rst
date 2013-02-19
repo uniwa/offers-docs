@@ -52,7 +52,7 @@ Rename each ``*.php.default`` file to ``*.php`` and edit accordingly if required
 
 * **configuration.php.default**
 
-    * ``APP_URL``: set the application url `(eg: http://coupons.edu.teiath.gr)` **no** trailing slash here.
+    * ``APP_URL``: set the application url `(eg: http://offers.teiath.gr)` **no** trailing slash here.
     * ``ISSUE_URL``: redmine url
     * ``ISSUE_TOKEN``: redmine's user access token
     * ``ISSUE_PROJECT_ID``: redmine project id to post issues to `(project must have an issue tracker)`.

@@ -6,7 +6,7 @@ Summary
 
 Το domain που χρησιμοποιείται για όλες τις κλήσεις είναι το::
 
-    https://coupons.teiath.gr/api
+    https://offers.teiath.gr/api
 
 το οποίο στις παρακάτω ενότητες αντικαθίσταται με το λεκτικό **<url>**.
 
@@ -44,7 +44,7 @@ JSON Request body::
 
 Sample XML request::
 
-    $ curl -X POST http://coupons.edu.teiath.gr/api/users/login \
+    $ curl -X POST http://offers.teiath.gr/api/users/login \
         -H "Content-Type: application/xml" \
         -H "Accept: application/xml" \
         -d "<User><username>foo</username><password>bar</password></User>" \
@@ -52,7 +52,7 @@ Sample XML request::
 
 Sample JSON request::
 
-    $ curl -X POST http://coupons.edu.teiath.gr/api/users/login \
+    $ curl -X POST http://offers.teiath.gr/api/users/login \
         -H "Content-Type: application/json" \
         -H "Accept: application/json" \
         -d '{"User": {"username": "foo", "password": "bar"}}' \
@@ -223,7 +223,7 @@ page           *<num>*         Show only results page number = *<num>*
 
 Sample JSON request with options::
 
-    $ curl -X GET http://coupons.edu.teiath.gr/api/offers/index/orderby:rank/page:2 -H "Accept: application/json"
+    $ curl -X GET http://offers.teiath.gr/api/offers/index/orderby:rank/page:2 -H "Accept: application/json"
 
 
 .. note::
@@ -491,7 +491,7 @@ GET    url/**coupon**/*{couponId}* Get coupon info with id *couponId*
 
 Sample JSON request ::
 
-    $ curl -X GET http://coupons.edu.teiath.gr/api/coupon/1 \
+    $ curl -X GET http://offers.teiath.gr/api/coupon/1 \
         -H "Accept: application/json" \
         -b /tmp/cookie
 
@@ -642,7 +642,7 @@ GET    url/**coupons**             Get a list of user's coupons
 
 Sample JSON request ::
 
-    $ curl -s -X GET http://coupons.edu.teiath.gr/api/coupons \
+    $ curl -s -X GET http://offers.teiath.gr/api/coupons \
         -H "Accept: application/json" \
         -b /tmp/cookie
 
@@ -726,7 +726,7 @@ Sample JSON response ::
 
 Sample XML request ::
 
-    $ curl -s -X GET http://coupons.edu.teiath.gr/api/coupons \
+    $ curl -s -X GET http://offers.teiath.gr/api/coupons \
         -H "Accept: application/xml" \
         -b /tmp/cookie
 
@@ -925,7 +925,7 @@ GET    url/**coupons/reinsert**/*{couponId}*                    Release coupon w
 
 Sample JSON request ::
 
-    $ curl -X GET http://coupons.edu.teiath.gr/api/coupons/reinsert/10
+    $ curl -X GET http://offers.teiath.gr/api/coupons/reinsert/10
         -H "Accept: application/json" \
         -b /tmp/cookie
 
@@ -998,7 +998,7 @@ Valid radius values:
 
 Sample JSON request ::
 
-    $ curl -X GET http://coupons/edu.teiath.gr/api/users/radius/5 \
+    $ curl -X GET http://offers.teiath.gr/api/users/radius/5 \
         -H "Accept: application/json" \
         -b /tmp/cookie
 
@@ -1012,7 +1012,7 @@ Sample JSON response::
 
 Sample XML request ::
 
-    $ curl -X GET http://coupons/edu.teiath.gr/api/users/radius/5 \
+    $ curl -X GET http://offers.teiath.gr/api/users/radius/5 \
         -H "Accept: application/xml" \
         -b /tmp/cookie
 
@@ -1095,7 +1095,7 @@ GET    url/**votes**                        Return logged-in user's votes
 
 Sample JSON request::
 
-    $ curl -s -X GET 'http://coupons.edu.teiath.gr/api/votes/' \
+    $ curl -s -X GET 'http://offers.teiath.gr/api/votes/' \
         -H "Accept: application/json" -b /tmp/cookie
 
 
@@ -1134,7 +1134,7 @@ Sample JSON response::
 
 Sample XML request::
 
-    $ curl -s -X GET 'http://coupons.edu.teiath.gr/api/votes/' \
+    $ curl -s -X GET 'http://offers.teiath.gr/api/votes/' \
         -H "Accept: application/xml" -b /tmp/cookie
 
 
@@ -1182,7 +1182,7 @@ GET    url/**offers/statistics**         Return taxonomy with offer counters
 
 Sample JSON request::
 
-    curl -s -X GET http://coupons.edu.teiath.gr/api/offers/statistics \
+    curl -s -X GET http://offers.teiath.gr/api/offers/statistics \
         -H "Accept: application/json"
 
 Sample JSON response::
