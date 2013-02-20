@@ -1,5 +1,5 @@
-Coupons Schema
-==============
+Offers XML Schema
+=================
 
 XSD
 ---

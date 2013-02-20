@@ -1,5 +1,5 @@
-Coupons API reference
-=====================
+Offers API reference
+====================
 
 Summary
 -------

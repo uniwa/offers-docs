@@ -1,7 +1,7 @@
-Coupons Installation
-====================
+Offers Installation
+===================
 
-Installation instructions for coupons web application.
+Installation instructions for the Offers web application.
 
 Dependencies
 ------------
@@ -28,9 +28,8 @@ download it as a git submodule or from a relsease tag.
 
 Repositories:
 
-* `Coupons (contains CakePHP framework) <http://git.edu.teiath.gr/coupons.git>`_
-* Coupons on github *(pending)*
-* `Coupons documentation <http://git.edu.teiath.gr/coupons-docs.git>`_
+* `Offers (coupons.git - also contains CakePHP framework) <http://git.edu.teiath.gr/coupons.git>`_
+* `Offers documentation (coupons-docs.git) <http://git.edu.teiath.gr/coupons-docs.git>`_
 * `CakePHP framework <https://github.com/cakephp/cakephp>`_
 * `CakePHP bootstrap-helper <https://github.com/loadsys/twitter-bootstrap-helper>`_
 
